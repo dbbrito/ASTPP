@@ -249,7 +249,7 @@ $(document).ready(function() {
 						
 							<div class="form-group mt-4">
 								<input type="text" name="number" readonly value="<?php echo isset($number)?$number:""; ?>" id="number" size="15" maxlength="40" class="form-control"/>
-								<label class="control-label" for="number"><?php echo gettext('User Name')?></label>
+								<label class="control-label" for="number"><?php echo gettext('Conta')?></label>
 							</div>
 							
 							<div class="form-group">
@@ -261,7 +261,7 @@ $(document).ready(function() {
 							</div>
 							
 							<div class="col-md-12 p-0">
-								<button name="action" type="button" id="submit_otp" value="Signup" class="btn btn-block text-uppercase border_box" onclick="validateForm();" ><?php echo gettext('Submit')?></button>
+								<button name="action" type="button" id="submit_otp" value="Signup" class="btn btn-block text-uppercase border_box" onclick="validateForm();" ><?php echo gettext('Entrar')?></button>
 							</div>
 							
 									<div class="col-md-12 text-center">
