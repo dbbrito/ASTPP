@@ -169,7 +169,7 @@ body {
 				<div class="form-group">
 					<input type="text" id="username" class="form-control error_login"
 						name="username" value="" autocomplete="off" required> <label
-						class="control-label" for="username"><?php echo gettext('Account No OR Email')?></label>
+						class="control-label" for="username"><?php echo gettext('E-mail')?></label>
 				</div>
 
 				<div class="form-group">
