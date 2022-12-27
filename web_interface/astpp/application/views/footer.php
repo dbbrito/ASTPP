@@ -241,9 +241,9 @@ jQuery(function($) {
 		<div class="col py-2">
   	   		 <label class="text-light" style="margin-top:3px;"><i> <?php echo gettext('Follow us on:')?> </i></label>
   	   		 <div class="social-media">
-  	   		  <a target="_blank" href="https://www.facebook.com/astpp.official/" title="Facebook"> <i class="facebook fa fa-facebook"></i></a>
-  	   		  <a target="_blank" href="https://in.linkedin.com/company/astpp-billing" title="Linkedin"> <i class="linkin fa fa-linkedin"></i></a>
-  	   		  <a target="_blank" href="https://twitter.com/astpp_official" title="Twitter"> <i class="twitter fa fa-twitter "></i></a>
+  	   		  <a target="_blank" href="https://www.facebook.com//" title="Facebook"> <i class="facebook fa fa-facebook"></i></a>
+  	   		  <a target="_blank" href="https://in.linkedin.com/company/" title="Linkedin"> <i class="linkin fa fa-linkedin"></i></a>
+  	   		  <a target="_blank" href="https://twitter.com/" title="Twitter"> <i class="twitter fa fa-twitter "></i></a>
   	   		 
   	   		</div>
 		 </div>
@@ -306,7 +306,7 @@ if (isset($selected_locale) && $value['locale'] == $selected_locale) {
 
 
 
-<div class="col-md-12 float-right pt-4 pr-0 text-light text-md-right version_size"><?php echo gettext("Version")?>  <?php echo common_model::$global_config['system_config']['version'] .' '.gettext('Community') ;?>
+<div class="col-md-12 float-right pt-4 pr-0 text-light text-md-right version_size"><?php echo gettext("Version")?>  <?php echo common_model::$global_config['system_config']['version'] .' '.gettext('v') ;?>
 <?php
 
 ?>
