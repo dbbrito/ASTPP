@@ -393,6 +393,7 @@ class User_form extends common
                 array(
                     'name' => 'company_name',
                     'size' => '15',
+		    'disabled' =>'true',
                     'class' => 'text field medium'
                 ),
                 'trim|xss_clean',
@@ -406,6 +407,7 @@ class User_form extends common
                     'name' => 'first_name',
                     'id' => 'first_name',
                     'size' => '15',
+		    'disabled' =>'true',
                     'class' => "text field medium"
                 ),
                 'trim|required|xss_clean',
@@ -418,6 +420,7 @@ class User_form extends common
                 array(
                     'name' => 'last_name',
                     'size' => '15',
+		    'disabled' =>'true',
                     'class' => "text field medium"
                 ),
                 'trim|alpha_numeric_space|xss_clean',
@@ -430,6 +433,7 @@ class User_form extends common
                 array(
                     'name' => 'telephone_1',
                     'size' => '15',
+		    'disabled' =>'true',
                     'class' => "text field medium"
                 ),
                 'phn_number',
@@ -442,6 +446,7 @@ class User_form extends common
                 array(
                     'name' => 'telephone_2',
                     'size' => '15',
+		    'disabled' =>'true',
                     'class' => "text field medium"
                 ),
                 'phn_number',
@@ -454,6 +459,7 @@ class User_form extends common
                 array(
                     'name' => 'email',
                     'size' => '50',
+		    'disabled' =>'true',
                     'class' => "text field medium"
                 ),
                 'required|valid_email|is_unique[' . $val . ']',
@@ -466,6 +472,7 @@ class User_form extends common
                 array(
                     'name' => 'address_1',
                     'size' => '15',
+		    'disabled' =>'true',
                     'class' => "text field medium"
                 ),
                 '',
@@ -478,6 +485,7 @@ class User_form extends common
                 array(
                     'name' => 'address_2',
                     'size' => '15',
+		    'disabled' =>'true',
                     'class' => "text field medium"
                 ),
                 '',
@@ -490,6 +498,7 @@ class User_form extends common
                 array(
                     'name' => 'city',
                     'size' => '20',
+		    'disabled' =>'true',
                     'class' => "text field medium"
                 ),
                 '',
@@ -502,6 +511,7 @@ class User_form extends common
                 array(
                     'name' => 'province',
                     'size' => '15',
+		    'disabled' =>'true',
                     'class' => "text field medium"
                 ),
                 '',
@@ -514,6 +524,7 @@ class User_form extends common
                 array(
                     'name' => 'postal_code',
                     'size' => '15',
+		    'disabled' =>'true',
                     'class' => "text field medium"
                 ),
                 'trim|xss_clean',
@@ -543,7 +554,8 @@ class User_form extends common
                 gettext('Timezone'),
                 array(
                     'name' => 'timezone_id',
-                    'class' => 'timezone_id'
+                    'class' => 'timezone_id',
+                    'disabled' =>true,
                 ),
                 'SELECT',
                 '',
@@ -563,6 +575,7 @@ class User_form extends common
                 array(
                     'name' => 'tax_number',
                     'size' => '100',
+		    'disabled' =>'true',
                     'class' => "text field medium"
                 ),
                 '',
