@@ -107,7 +107,7 @@
                                 </div>
                                 <div class="col-lg-4 col-5 py-4 float-left text-center">
                                     <i class="fa fa-money fa-4x"></i>
-                                    <a href="<?php echo base_url();?>products/products_topuplist/" class="btn btn-success btn-sm p-1 mt-2 w-100"><?php echo gettext('Top Up'); ?></a>
+                                    <a href="https://brvoz.com.br/cart.php?gid=addons" class="btn btn-success btn-sm p-1 mt-2 w-100"><?php echo gettext('Top Up'); ?></a>
                                 </div>
                             </div>
                         </div>      
