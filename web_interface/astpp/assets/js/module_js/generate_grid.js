@@ -383,7 +383,7 @@ function delete_multiple(btn_url, flag) {
         if (flag > 0) {
             confirm_string = 'Are you sure want to delete? This action will delete all other data which belongs to this account(s).';
         } else {
-            confirm_string = 'Are you sure want to delete this selected records?';
+            confirm_string = 'Tem certeza de que deseja excluir os registros selecionados?';
         }
         var answer = confirm(confirm_string);
         if (answer) {
@@ -408,7 +408,7 @@ function delete_multiple(btn_url, flag) {
                         }).flexReload();
                         $('input:checkbox').removeAttr('checked');
                         $("#toast-container_error").css("display", "block");
-                        $(".toast-message").html("Selected records has been deleted.");
+                        $(".toast-message").html("Os registros selecionados foram deletados.");
                         $('.toast-top-right').delay(5000).fadeOut();
                     } else {
                         alert("Problem to delete records");
