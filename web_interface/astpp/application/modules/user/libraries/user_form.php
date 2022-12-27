@@ -688,7 +688,7 @@ class User_form extends common
         );
          $form['button_save'] = array(
             'name' => 'action',
-            'content' => gettext('Submit'),
+            'content' => gettext('Salvar'),
             'value' => 'save',
             'type' => 'submit',
             'class' => 'btn btn-success'
