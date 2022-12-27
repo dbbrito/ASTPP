@@ -1561,7 +1561,7 @@ class CI_Form_validation {
     		if( $password_type == '0' ) {
     			if(1 !== preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%^&*()+]{8,}$/', $str)) {
 				if (strpos($str, ';') || strpos($str, '=') || strpos($str, '?') || strpos($str, ',') || strpos($str, '&')  || strpos($str, ':') || strpos($str, '[') || strpos($str, ']')  || strpos($str, '+') || strpos($str, '/') || strpos($str, "'") !== false) {
-            		$this->CI->form_validation->set_message('chk_password_expression', gettext("%s must be at least 8 characters and must contain at least one lower case letter, one upper case letter and one digit and any special characters must have included NOTE (?;=,&:\[]+/) not allowed in special characters"));
+            		$this->CI->form_validation->set_message('chk_password_expression', gettext("%s deve ter pelo menos 8 caracteres e deve conter pelo menos uma letra minÃºscula, uma letra maiÃºscula e um dÃ­gito e quaisquer caracteres especiais devem ter incluÃ­do NOTA (?;=,&:\[]+/) nÃ£o permitido em caracteres especiais"));
                 	return FALSE;
 				}
 			    } else {
@@ -1596,7 +1596,7 @@ class CI_Form_validation {
 		public function strong_password($str)
 		{
 			if(!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/", $str)){
-				$this->CI->form_validation->set_message('strong_password', gettext("%s must be at least 8 characters and must contain at least one lower case letter, one upper case letter and one digit and any special characters must have included"));
+				$this->CI->form_validation->set_message('strong_password', gettext("%s deve ter pelo menos 8 caracteres, deve conter pelo menos uma letra minÃºscula, uma letra maiÃºscula, um dÃ­gito e quaisquer caracteres especiais deve ser incluÃ­do"));
 				return FALSE;
 			}
 		}
