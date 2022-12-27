@@ -1951,6 +1951,7 @@ class User_form extends common
                 array(
                     'name' => 'effective_caller_id_name',
                     'size' => '20',
+		    'disabled' =>true,
                     'class' => "text field medium"
                 ),
                 'xss_clean',
@@ -1963,6 +1964,7 @@ class User_form extends common
                 array(
                     'name' => 'effective_caller_id_number',
                     'size' => '20',
+		    'disabled' =>true,
                     'class' => "text field medium"
                 ),
                 'xss_clean',
