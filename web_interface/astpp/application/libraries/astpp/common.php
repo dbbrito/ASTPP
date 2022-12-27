@@ -1834,7 +1834,7 @@ class common {
 					$alert_template = str_replace('&nbsp;', '', $alert_template);
 					$alert_template = str_replace('<br />', '', $alert_template);
 
-					$message .= "<br>\n<br>\nASTPP - #1 Open Source VoIP Solution Powered by Inextrix Technologies Pvt. Ltd.";
+					$message .= "<br>\n<br>\n";
 					// Kinjal ASTPPCOM-1078 Start
 					$message = str_replace('<br>', '', $message);
 					// Kinjal ASTPPCOM-1078 END
