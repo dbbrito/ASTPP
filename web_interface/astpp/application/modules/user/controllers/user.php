@@ -2144,7 +2144,7 @@ function user_fund_transfer_save()
                                     "payment_method" => "Manual",
                                     "order_item_id" => 0,
                                     "charge_type" => "FUNDTRANSFER",
-                                    "description" => "Fund has been transfered from " . $from_account_info['number'] . " '(' " . $to_account_info['number'] . " ')' ",
+                                    "description" => "Valor foi transferido de " . $from_account_info['number'] . " '(' " . $to_account_info['number'] . " ')' ",
                                     "invoice_type" => "debit",
                                     "is_update_balance" => "true"
                                 );
