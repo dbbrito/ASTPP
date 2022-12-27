@@ -232,8 +232,8 @@ jQuery(function($) {
             <strong><?=gettext($user_footer); ?></strong>
           </span>
       </a><br> -->
-     <strong> <span class="text-warning"><?php echo gettext('ASTPP - #1 Open Source VoIP Solution<br>
-      Powered by Inextrix Technologies Pvt. Ltd.<br>')?> </span></strong>
+     <strong> <span class="text-warning"><?php echo gettext('BRVOZ Cloud Infra
+      ')?> </span></strong>
       </div>
       <?php } ?>
       <!-- // end ASTPPENT-3818 -->
