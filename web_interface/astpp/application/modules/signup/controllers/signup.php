@@ -763,7 +763,7 @@ class Signup extends MX_Controller
                 if ((! filter_var($email, FILTER_VALIDATE_EMAIL)) && (! filter_var($number, FILTER_SANITIZE_NUMBER_INT))) {
                     $data['error']['email'] = "<label class='error_label'><span id='error_mail' class='text-danger'>".gettext("Please enter proper Email.")."</span></label>";
 
-                    $data['error']['number'] = "<label class='error_label'><span id='error_mail' class='text-danger'>".gettext("Please enter proper Username")."</span></label>";
+                    $data['error']['number'] = "<label class='error_label'><span id='error_mail' class='text-danger'>".gettext("Por favor, insira o login corretamente")."</span></label>";
 
                     $this->load->view('view_forgotpassword', $data);
                 } else {
