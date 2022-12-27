@@ -3,11 +3,11 @@ $tooltip_data = array (
 	/*Send Credit*/
 	"user_fund_transfer_form_fromaccountid" => "",
 
-	"user_fund_transfer_form_toaccountid" => "The known account number to send credit into",
+	"user_fund_transfer_form_toaccountid" => "Insira a conta para envio",
 
-	"user_fund_transfer_form_credit" => "Amount to transfer to other account",
+	"user_fund_transfer_form_credit" => "Valor a transferir para outra conta",
 
-	"user_fund_transfer_form_notes" => "Self explainatory note for reference",
+	"user_fund_transfer_form_notes" => "Insira o motivo",
 	/*End*/
 
 	/*Pinless CLI*/
