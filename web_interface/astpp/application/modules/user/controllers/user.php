@@ -2071,7 +2071,7 @@ function user_fund_transfer_save()
                             } elseif ($post_array['credit'] < 0) {
                                 $this->session->set_flashdata('astpp_notification', gettext('Please enter amount greater then 0.'));
                             } elseif ($minimum_fund['value'] > $post_array['credit']) {
-                                  $this->session->set_flashdata('astpp_notification', gettext('You need to enter minimum').' '.$minimum_fund_value.' '.gettext('for fund transfer.'));
+                                  $this->session->set_flashdata('astpp_notification', gettext('Somente valores acima de').' '.$minimum_fund_value.' '.gettext('permitido.'));
                             } elseif (! isset($toid) || ! isset($post_array['toaccountid'])) {
                                 $this->session->set_flashdata('astpp_notification', gettext('Please enter valid account number!'));
                             } elseif ($post_array['credit'] < 0 || $post_array['credit'] > $balance) {
