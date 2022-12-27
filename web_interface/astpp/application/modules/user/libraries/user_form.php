@@ -1990,6 +1990,7 @@ class User_form extends common
                 array(
                     'name' => 'codec',
                     'size' => '20',
+		    'disabled' =>true,
                     'class' => "text field medium"
                 ),
                 '',
