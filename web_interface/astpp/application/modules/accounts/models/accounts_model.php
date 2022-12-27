@@ -232,7 +232,7 @@ class Accounts_model extends CI_Model
         unset($data['action'], $data['id'], $data['account_currency'], $data['payment_type']);
         if (isset($data) && ! empty($accountdata)) {
 
-            $payment_type=($data['payment_mode'] == 1) ? 'POSTCHARGE' : 'REFILL';
+            $payment_type=($data['payment_mode'] == 1) ? 'DEBITADA' : 'CREDITADA';
 
             $payment_array = array(
                 "accountid" => $accountdata['id'],
@@ -243,7 +243,7 @@ class Accounts_model extends CI_Model
                 "payment_method" => "Manual",
                 "order_item_id" => 0,
                 "charge_type" => $payment_type,
-                "description" => "Account has been " . $payment_type . " by " . $accountinfo['first_name'] . " '(' " . $accountinfo['number'] . " ')' ",
+                "description" => "A conta foi " . $payment_type . " por " . $accountinfo['first_name'] . " '(' " . $accountinfo['number'] . " ')' ",
                 "invoice_type" => $data['payment_mode'] == 1 ? "debit" : "credit",
                 "is_apply_tax" => "false"
             );
