@@ -1802,31 +1802,35 @@ function user_cdrs_report_json()
     $json_data = $paging_data["json_paging"];
     $query = $this->user_model->getuser_cdrs_list(true, $paging_data["paging"]["start"], $paging_data["paging"]["page_no"], false);
     $grid_fields = json_decode($this->user_form->build_cdrs_report($accountinfo['type']));
-    $json_data['rows'] = $this->form->build_grid($query, $grid_fields);
-
-    if ($count_all['count'] > 0) {
-        $search_arr = $this->session->userdata('user_cdrs_report_search');
-        $show_seconds = (! empty($search_arr['search_in'])) ? $search_arr['search_in'] : 'minutes';
-        $duration = ($show_seconds == 'minutes') ? ($count_all['billseconds'] > 0) ? floor($count_all['billseconds'] / 60) . ":" . sprintf("%02d", $count_all['billseconds'] % 60) : "00:00" : $count_all['billseconds'];
-        $json_data['rows'][] = array(
-            "cell" => array(
-                "<b>Grand Total</b>",
-                "",
-                "",
-                "",
-                "",
-                "<b>" . $duration . "</b>",
-                "<b>" . $this->common_model->calculate_currency($count_all[$variable] - $count_all['free_debit'], "", "", true, false) . "</b>",
-                "",
-                "",
-                ""
-            )
-        );
+        $json_data['rows'] = $this->form->build_grid($query, $grid_fields);
+        // ASTPPCOM-890 Ashish start
+        $currency_info = $this->common->get_currency_info();
+        // ASTPPCOM-890 Ashish End
+        if ($count_all['count'] > 0) {
+            $search_arr = $this->session->userdata('user_cdrs_report_search');
+            $show_seconds = (! empty($search_arr['search_in'])) ? $search_arr['search_in'] : 'minutes';
+            $duration = ($show_seconds == 'minutes') ? ($count_all['billseconds'] > 0) ? floor($count_all['billseconds'] / 60) . ":" . sprintf("%02d", $count_all['billseconds'] % 60) : "00:00" : $count_all['billseconds'];
+            $json_data['rows'][] = array(
+                "cell" => array(
+                    "<b>Grand Total</b>",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "<b>" . $duration . "</b>",
+                    // ASTPPCOM-890 Ashish start
+                    "<b>" . $this->common->calculate_currency_manually($currency_info, $count_all['total_debit'] - $count_all['free_debit'], false) . "</b>",
+                    // ASTPPCOM-890 Ashish End
+                    "",
+                    "",
+                    ""
+                )
+            );
+        }
+        echo json_encode($json_data);
     }
-    echo json_encode($json_data);
-}
 
-function user_report_recording_download($file_name)
+    function user_report_recording_download($file_name)
 {
     $file_name = $this->config->item('recordings_path') . $file_name;
     header('Content-Description: File Transfer');
